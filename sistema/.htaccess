@@ -1,0 +1,8 @@
+RewriteEngine on
+
+# index
+RewriteRule ^home$								index.php [NC]
+RewriteRule ^sobre$								sobre.php [NC]
+RewriteRule ^imoveis-([^/]+)$					imoveis.php?tipo=$1 [QSA,L]
+RewriteRule ^encontre-imoveis-([^/]+)-([^/]+)$			imoveis_detalhes.php?tipo=$1&id=$2 [QSA,L]
+RewriteRule ^atendimento$						atendimento.php [NC]

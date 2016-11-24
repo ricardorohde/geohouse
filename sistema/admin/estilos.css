@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Montserrat:400,700');
+
+body{
+  font-family: 'Cabin', sans-serif;
+	background-color:#f2f2f2;
+	margin:20px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 16px;
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: #36c36e;
+}
+
+.navbar-inverse {
+	color: #fff;
+	background-color: #36c36e;
+	border-bottom: none;
+}
+.navbar-inverse .navbar-nav li a{
+	color: #fff;
+}
+
+.container {
+	max-width: 780px;
+}
+
+.btn-success {
+  background-color: #36c36e;
+  font-family: 'Montserrat', sans-serif;
+}
