@@ -43,32 +43,40 @@
 
 	<body>
 
-		<nav class="navbar navbar-inverse navbar-static-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#"><img src="<?=ROOT_URL?>/img/logo_negativo.png" width="120px"></a>
-				</div>
+		<div class="barra_topo">
+			<div class="container">
+				(19) 0000 0000  |  email@site.com.br
+				<a href="admin" target="_blank" class="pull-right">Admin</a>
+			</div>
+		</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<!--<li><a href="imoveis.php" >Imóveis</a></li>-->
-						<!--<li><a href="categoria.php" >Categorias</a></li>-->
-						<!--<li><a href="finalidade.php" >Finalidades</a></li>-->
-						<!--<li><a href="tipo_imovel.php" >Tipo imóvel</a></li>-->
-						<!--<li><a href="cidade.php" >Cidades</a></li>-->
-						<!--<li><a href="usuario.php" >Usuários</a></li>-->
+		<div class="navbar-wrapper">
+			<div class="container">
 
-						<li><a href="<?=ROOT_URL?>/admin/login.php?acao=sair" >Olá <?=$_SESSION['usuario_nome']?> (sair)</a></li>
-						<li><a href="<?=ROOT_URL?>/admin/usuario.php" >Minha conta</a></li>
+				<nav class="navbar navbar-static-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a href="home">
+								<img src="img/logo.png" >
+							</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse pull-right">
+							<ul class="nav navbar-nav">
+								<li <?=($pagina=='home')?' class="active"':''?>><a href="home">Home</a></li>
+								<li <?=($pagina=='sobre')?' class="active"':''?>><a href="sobre">Sobre</a></li>
+								<li <?=($pagina=='imoveis-aluguel')?' class="active"':''?>><a href="imoveis-aluguel">Aluguel</a></li>
+								<li <?=($pagina=='imoveis-venda')?' class="active"':''?>><a href="imoveis-venda">Venda</a></li>
+								<li <?=($pagina=='atendimento')?' class="active"':''?>><a href="atendimento">Atendimento</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
 
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
+			</div>
+		</div>

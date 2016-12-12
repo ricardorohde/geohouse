@@ -27,38 +27,40 @@ if($acao=="contato"){
 }
 ?>
 <? include("inc/header.php"); ?>
-<?
-				if(isset($enviou)){
-					if($enviou==1){
-						echo '<div class="alert alert-success">Mensagem enviada com sucesso! Aguarde nosso retorno.</div>';
-					}else{
-						echo '<div class="alert alert-danger">Mensagem não enviada! Tente novamente ou contate-nos.</div>';
-					}
-				}
-				?>
-				<form method="post" action="?acao=contato" name="frmcontato">
-					<div class="form-group">
-						<label>Seu nome *</label>
-						<input type="text" class="form-control" name="txtnome"  required/>
-					</div>
-					<div class="form-group">
-						<label>Seu e-mail *</label>
-						<input type="email" class="form-control" name="txtemail"  required/>
-					</div>
-					<div class="form-group">
-						<label>Seu telefone</label>
-						<input type="text" class="form-control" name="txttelefone" />
-					</div>
-					<div class="form-group">
-						<label>Mensagem *</label>
-						<textarea class="form-control" name="txtmensagem" required></textarea>
-					</div>
-					<div class="form-group">
-						<input type="submit" class="btn btn-success btn-lg" value="Enviar" >
-					</div>
-					<span class="text-info">* Preencha todos os campos</span>
 
-				</form>
-			
+<div class="container">
+	<?
+		if(isset($enviou)){
+			if($enviou==1){
+				echo '<div class="alert alert-success">Mensagem enviada com sucesso! Aguarde nosso retorno.</div>';
+			}else{
+				echo '<div class="alert alert-danger">Mensagem não enviada! Tente novamente ou contate-nos.</div>';
+			}
+		}
+		?>
+		<form method="post" action="?acao=contato" name="frmcontato">
+			<div class="form-group">
+				<label>Seu nome *</label>
+				<input type="text" class="form-control" name="txtnome"  required/>
+			</div>
+			<div class="form-group">
+				<label>Seu e-mail *</label>
+				<input type="email" class="form-control" name="txtemail"  required/>
+			</div>
+			<div class="form-group">
+				<label>Seu telefone</label>
+				<input type="text" class="form-control" name="txttelefone" />
+			</div>
+			<div class="form-group">
+				<label>Mensagem *</label>
+				<textarea class="form-control" name="txtmensagem" required></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-success btn-lg" value="Enviar" >
+			</div>
+			<span class="text-info">* Preencha todos os campos</span>
+
+		</form>
+</div>
 
 <? include("inc/footer.php"); ?>

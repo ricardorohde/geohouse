@@ -92,59 +92,58 @@ $total_imovel = $totalsql;
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3" style="background-color:#f2f2f2; padding-bottom:150px;">
-				<h3>FILTRE SUA BUSCA</h3>
+			<div class="col-md-12" style="background-color:#f2f2f2; padding-top:30px;">
 				<form method="get">
-					<div class="form-group">
-						<label>Tipo do imóvel</label>
-						<select name="tipoimovel" class="form-control selectpicker" >
-							<option value="">Todos</option>
-						<?
-						foreach(ModelTipo::where('') as $val){
-							echo '<option value="'.$val->getid().'" '.(($filtro['tipoimovel']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
-						}
-						?>
-						</select>
-					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+							<label>Tipo do imóvel</label>
+							<select name="tipoimovel" class="form-control selectpicker" >
+								<option value="">Todos</option>
+							<?
+							foreach(ModelTipo::where('') as $val){
+								echo '<option value="'.$val->getid().'" '.(($filtro['tipoimovel']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
+							}
+							?>
+							</select>
+						</div>
 
-					<div class="form-group">
-						<label>Finalidade</label>
-						<select name="finalidade" class="form-control selectpicker">
-							<option value="">Todos</option>
-						<?
-						foreach(ModelFinalidade::where('') as $val){
-							echo '<option value="'.$val->getid().'" '.(($filtro['finalidade']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
-						}
-						?>
-						</select>
-					</div>
+						<div class="form-group col-md-4">
+							<label>Finalidade</label>
+							<select name="finalidade" class="form-control selectpicker">
+								<option value="">Todos</option>
+							<?
+							foreach(ModelFinalidade::where('') as $val){
+								echo '<option value="'.$val->getid().'" '.(($filtro['finalidade']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
+							}
+							?>
+							</select>
+						</div>
 
-					<div class="form-group">
-						<label>Cidade</label>
-						<select name="cidade" class="form-control selectpicker">
-							<option value="">Todos</option>
-						<?
-						foreach(ModelCidade::where('') as $val){
-							echo '<option value="'.$val->getid().'" '.(($filtro['cidade']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
-						}
-						?>
-						</select>
+						<div class="form-group col-md-4">
+							<label>Cidade</label>
+							<select name="cidade" class="form-control selectpicker">
+								<option value="">Todos</option>
+							<?
+							foreach(ModelCidade::where('') as $val){
+								echo '<option value="'.$val->getid().'" '.(($filtro['cidade']==$val->getid())?'selected="selected"':'').'>'.$val->getnome().'</option>';
+							}
+							?>
+							</select>
+						</div>
 					</div>
 
 					<div class="row">
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-2">
 							<label>Dormitórios</label>
 							<input type="number" name="dormitorio" class="form-control" value="<?=$filtro['dormitorio']?>">
 						</div>
 
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-2">
 							<label>Suítes</label>
 							<input type="number" name="suite" class="form-control" value="<?=$filtro['suite']?>">
 						</div>
-					</div>
 
-					<div class="row">
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-2">
 							<label>Cond. fechado</label>
 							<select name="condfechado" class="form-control selectpicker">
 								<option value="" <?=(($filtro['condfechado']=='')?'selected="selected"':'')?> >Todos</option>
@@ -153,11 +152,19 @@ $total_imovel = $totalsql;
 							</select>
 						</div>
 
-						<div class="form-group col-md-6">
+						<div class="form-group col-md-2">
 							<label>Vagas</label>
 							<input type="number" name="vaga" class="form-control" value="<?=$filtro['vaga']?>">
 						</div>
+
+						<div class="form-group col-md-2">
+							<label>Aplicar</label>
+							<input type="submit" class="btn btn-success btn-block" value="FILTRAR">
+						</div>
+
 					</div>
+
+
 					<!--
 					<div class="row">
 						<div class="form-group col-md-6">
@@ -171,17 +178,13 @@ $total_imovel = $totalsql;
 						</div>
 					</div>
 					-->
-					<div class="form-group">
-						<input type="submit" class="btn btn-success btn-block" value="FILTRAR">
-					</div>
+
 				</form>
 				<hr>
 			</div>
-			<div class="col-md-9" style="margin-bottom:50px;margin-top:50px;">
-				<div class="col-md-12">
+			<div class="col-md-12" style="margin-bottom:50px;margin-top:50px;">
 					<p>Resultado da sua busca: <strong><?=$total_imovel?> imóvel(eis) encontrado(s).</strong></p>
 					<hr>
-				</div>
 				<!-- imoveis -->
 				<?
 
@@ -194,7 +197,7 @@ $total_imovel = $totalsql;
 						}
 						$imovel_categoria = ModelCategoria::where("WHERE id='".$val->getid_categoria()."' LIMIT 1")[0]->getnome();
 						echo '
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<div class="panel text-center box_imovel">
 									<img src="thumb.php?imagem='.$afoto.'&largura=200&altura=100" class="img-responsive" width="100%" >
 									<a href="encontre-imoveis-'.$tipo.'-'.$val->gethash().'" class="btn btn-transparente2 btn-xs">

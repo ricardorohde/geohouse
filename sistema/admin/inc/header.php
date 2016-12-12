@@ -51,12 +51,12 @@ if($_SESSION['usuario_id'] == '' OR $_SESSION['usuario_nome'] == '' OR $_SESSION
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<!--<li><a href="imoveis.php" >Imóveis</a></li>-->
-						<!--<li><a href="categoria.php" >Categorias</a></li>-->
-						<!--<li><a href="finalidade.php" >Finalidades</a></li>-->
-						<!--<li><a href="tipo_imovel.php" >Tipo imóvel</a></li>-->
-						<!--<li><a href="cidade.php" >Cidades</a></li>-->
-						<!--<li><a href="usuario.php" >Usuários</a></li>-->
+						<li><a href="imoveis.php" >Imóveis</a></li>
+						<li><a href="categoria.php" >Categorias</a></li>
+						<li><a href="finalidade.php" >Finalidades</a></li>
+						<li><a href="tipo_imovel.php" >Tipo imóvel</a></li>
+						<li><a href="cidade.php" >Cidades</a></li>
+						<li><a href="usuario.php" >Usuários</a></li>
 
 						<li><a href="<?=ROOT_URL?>/admin/login.php?acao=sair" >Olá <?=$_SESSION['usuario_nome']?> (sair)</a></li>
 						<li><a href="<?=ROOT_URL?>/admin/usuario.php" >Minha conta</a></li>

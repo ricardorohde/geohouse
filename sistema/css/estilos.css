@@ -12,14 +12,14 @@ h1, h2, h3, h4 {
 }
 
 .barra_topo {
-	background-color: #2d3e50;
+	background-color: #666;
 	padding-top: 10px;
 	padding-bottom:10px;
 	color: white;
 }
 
 .base_destaque {
-	background-color: #2d3e50;
+	background-color: #666;
 	padding-top:40px;
 	padding-bottom:40px;
 	color: white;
@@ -32,26 +32,26 @@ h1, h2, h3, h4 {
 }
 .btn-transparente:hover {
 	color: #fff;
-	border: solid 2px #f3cc29;
+	border: solid 2px #999;
 }
 .btn-transparente2 {
-	color: #f3cc29;
-	border: solid 2px #f3cc29;
+	color: #999;
+	border: solid 2px #999;
 	margin: 10px;
 }
 .btn-transparente2:hover {
-	color: #2d3e50;
-	border: solid 2px #2d3e50;
+	color: #666;
+	border: solid 2px #666;
 }
 
 .amarelo{
-	color: #f3cc29;
+	color: #999;
 }
 .amarelo_fundo{
-	background-color: #f3cc29;
+	background-color: #999;
 }
 .titulo1{
-	color: #2d3e50;
+	color: #666;
 	margin-top:50px;
 	margin-bottom:50px;
 }
@@ -64,14 +64,14 @@ h1, h2, h3, h4 {
 	color: #fff;
 }
 .footer2{
-	background-color: #2d3e50;
+	background-color: #666;
 	padding-top:80px;
 	padding-bottom:140px;
 	color: #999;
 }
 
 .nav li a {
-	color: #2d3e50;
+	color: #666;
 	font-weight: 700;
 	font-size: 16px;
 	padding-top:50px;
@@ -79,9 +79,9 @@ h1, h2, h3, h4 {
 }
 
 .nav li.active a {
-	color: #f3cc29;
+	color: #999;
 	background-color: #f2f2f2;
-	border-top: solid 3px #f3cc29;
+	border-top: solid 3px #999;
 	margin-top: -3px;
 }
 .navbar {
@@ -101,7 +101,7 @@ h1, h2, h3, h4 {
 	margin-left:360px;
 
 	padding:30px;
-	background-color: #f3cc29;
+	background-color: #999;
 	color: #fff;
 	margin-bottom: -50px;
 	z-index:999;
