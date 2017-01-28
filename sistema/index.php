@@ -61,7 +61,8 @@ $totalslide       = count($imovel_slide);
       <img src="img/ilustra.jpg" width="80%" height="180px" >
     </div>
     <div class="col-md-6 col-md-offset-3 text-center">
-      <p>Com a expertise necessária para <strong>encontrar</strong> ou administrar o <strong>seu imóvel</strong>, a CPPS investe em tecnologia, agilidade e serviços especializados para oferecer aos seus clientes segurança e satisfação.</p>
+      <p>LOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM
+         LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM LLOREM IPSUM L</p>
       <a href="sobre" class="btn btn-default">Sobre nós</a>
     </div>
   </div>
