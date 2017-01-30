@@ -1,6 +1,5 @@
-<?
+<?php
 $pagina = 'home';
-require_once "admin/inc/conexao.php";
 include("inc/header.php");
 
 $imovel_slide 		= ModelImovel::where('ORDER BY RAND() LIMIT 3');

@@ -56,7 +56,7 @@
 									<input type="password" class="form-control" name="txtsenha" required>
 								</div>
 								<div class='form-group'>
-									<input type='submit' name="btenviar" class="btn btn-info" value="Login">
+									<input type='submit' name="btenviar" class="btn btn-info btn-block" value="Login">
 								</div>
 								<?
 								if(isset($_GET['erro'])){

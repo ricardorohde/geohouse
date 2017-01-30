@@ -60,6 +60,10 @@ require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/cidade.php";
 require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/finalidade.php";
 require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/tipo_imovel.php";
 require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/usuario.php";
+require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/config.php";
+require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/prospecto.php";
+require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/interesse.php";
+require_once $_SERVER["DOCUMENT_ROOT"].ROOT_URL."/admin/dao/pagina.php";
 
 $acao = (isset($_GET['acao']))?$_GET['acao']:'';
 

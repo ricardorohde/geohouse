@@ -1,8 +1,9 @@
-<?
+<?php
+require_once "inc/conexao.php";
 session_start();
 if($_SESSION['usuario_id'] == '' OR $_SESSION['usuario_nome'] == '' OR $_SESSION['usuario_email'] == '' OR $_SESSION['usuario_perfil'] == ''){
 	session_destroy();
-	header("location: ".ROOT_URL."/entrar.php?erro=3");
+	header("location: ".ROOT_URL."/admin/entrar.php?erro=3");
 	exit();
 }
 
@@ -45,12 +46,16 @@ if($_SESSION['usuario_id'] == '' OR $_SESSION['usuario_nome'] == '' OR $_SESSION
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img src="<?=ROOT_URL?>/img/logo_negativo.png" width="120px"></a>
+					<a class="navbar-brand" href="<?=ROOT_URL?>/admin"><img src="<?=ROOT_URL?>/img/logo_negativo.png" width="120px"></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
+						<li><a href="config.php" >Config</a></li>
+						<li><a href="pagina.php" >Páginas</a></li>
+						<li><a href="stats.php" >Relatórios</a></li>
+						<li><a href="prospecto.php" >Prospectos</a></li>
 						<li><a href="imoveis.php" >Imóveis</a></li>
 						<li><a href="categoria.php" >Categorias</a></li>
 						<li><a href="finalidade.php" >Finalidades</a></li>
@@ -58,15 +63,32 @@ if($_SESSION['usuario_id'] == '' OR $_SESSION['usuario_nome'] == '' OR $_SESSION
 						<li><a href="cidade.php" >Cidades</a></li>
 						<li><a href="usuario.php" >Usuários</a></li>
 
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?=ROOT_URL?>/admin/login.php?acao=sair" >Olá <?=$_SESSION['usuario_nome']?> (sair)</a></li>
-						<li><a href="<?=ROOT_URL?>/admin/usuario.php" >Minha conta</a></li>
-
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<?
+		<div class="bar_stats">
+				<div class="row">
+					<div class="col-md-3">
+						graf 1
+					</div>
+					<div class="col-md-3">
+						graf 2
+					</div>
+					<div class="col-md-3">
+						graf 3
+					</div>
+					<div class="col-md-3">
+						graf 4
+					</div>
+				</div>
+		</div>
+
+		<?php
 		if(isset($_GET['resultado'])){
 			if($_GET['resultado']==1){
 				echo '<div class="alert alert-success">Operação realizada com sucesso.</div>';

@@ -89,7 +89,7 @@ class ModelImovel {
 
             return $sql->execute();
         } catch (Exception $e) {
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
+            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde. |".$e->getMessage();
         }
     }
 

@@ -1,4 +1,4 @@
-<?
+<?php
 require_once "inc/conexao.php";
 
 if($acao == "incluir"){
@@ -47,7 +47,7 @@ if($acao == "incluir"){
 		<link rel="stylesheet" href="estilos.css" >
 
 		<style>
-			.containter {
+			/*.containter {
 			  position: relative;
 			  height: 100%;
 			  background-color: #333;
@@ -57,7 +57,7 @@ if($acao == "incluir"){
 			  top: 50%;
 			  position: absolute;
 			  transform: translateY(-50%);
-			}
+			}*/
 		</style>
 	</head>
 
@@ -68,7 +68,7 @@ if($acao == "incluir"){
 				<div class="col-xs-12 col-md-4 col-md-offset-4 box-centro">
 
 					<div class="panel panel-default ">
-						<div class="panel-body text-center">
+						<div class="panel-body">
 
 						<form method="post" action="?acao=incluir" name="form">
 
@@ -107,6 +107,9 @@ if($acao == "incluir"){
 									<div class="form-group">
 										<label>Foto</label>
 										<input type="file" name="txtfoto" class="form-control" value="">
+									</div>
+									<div class="form-group">
+										<input type="submit" name="btenviar" class="btn btn-success" value="Cadastrar">
 									</div>
 								</div>
 

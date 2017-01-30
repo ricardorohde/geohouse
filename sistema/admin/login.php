@@ -11,7 +11,7 @@ if($acao=='autenticar'){
 		$_SESSION['usuario_nome'] = $busca->getnome();
 		$_SESSION['usuario_email'] = $busca->getemail();
 		$_SESSION['usuario_perfil'] = $busca->getperfil();
-		header("location: imoveis.php");
+		header("location: index.php");
 		exit();
 	}else{
 		header("location: entrar.php?erro=1");

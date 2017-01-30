@@ -38,8 +38,8 @@
 	</div>
 	<div style="padding-top:20px; padding-bottom:20px; font-size:10px;color:#999;">
 	<div class="container">
-	Todos os direitos reservados. Nos reservamos no direito de corrigir quaisquer erros ortográficos encontrados no website cppsimoveis.com.br. Imagens ilustrativas. Consulte valores e condições através dos canais de atendimento.
-	<br />Desenvolvimento <a href="http://macanetaweb.com.br" target="_blank">Maçaneta</a>.
+	Todos os direitos reservados. Nos reservamos no direito de corrigir quaisquer erros ortográficos encontrados neste website. Imagens ilustrativas. Consulte valores e condições através dos canais de atendimento.
+	<br />App de Imóveis <a href="http://geohouse.com.br" target="_blank">GEOHOUSE</a>.
 	</div>
 	</div>
 </footer>

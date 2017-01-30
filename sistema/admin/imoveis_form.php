@@ -1,6 +1,7 @@
-<?
+<?php
 
 require_once "inc/conexao.php";
+include("inc/header.php");
 
 $imovel = new Imovel;
 
@@ -62,13 +63,14 @@ if($acao == "incluir"){
 	$imovel->setvagas($_POST['txtvagas']);
 
 	$inserir = ModelImovel::inserir($imovel);
-	if($inserir){
-		header("location: imoveis.php?resultado=1");
-		exit();
-	}else{
-		header("location: imoveis.php?resultado=0");
-		exit();
-	}
+	print_r($inserir);
+	// if($inserir){
+	// 	header("location: imoveis.php?resultado=1");
+	// 	exit();
+	// }else{
+	// 	header("location: imoveis.php?resultado=0");
+	// 	exit();
+	// }
 }
 
 function NovaHash($caracteres){
@@ -84,7 +86,6 @@ function NovaHash($caracteres){
 $novahash 	= NovaHash(10);
 
 ?>
-<? include("inc/header.php"); ?>
 
 <div class="container">
 	<div class="row" style="margin-bottom:20px;">
@@ -121,7 +122,7 @@ $novahash 	= NovaHash(10);
 					</div>
 					<div class="form-group col-md-12">
 						<label>Descrição</label>
-						<textarea name="txtdescricao" class="form-control"><?=$imovel->getdescricao()?></textarea>
+						<textarea name="txtdescricao" class="form-control summernote"><?=$imovel->getdescricao()?></textarea>
 					</div>
 					<div class="form-group col-md-6">
 						<label>Vídeo embed Youtube</label>

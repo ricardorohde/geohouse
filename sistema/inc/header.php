@@ -1,3 +1,11 @@
+<?php
+require_once "admin/inc/conexao.php";
+
+// config de styles
+$config = ModelConfig::where("WHERE id=1");
+$config = $config[0];
+
+?>
 <html lang="pt-br">
 
 	<head>
@@ -38,6 +46,50 @@
 
 		<link href="bower_components/lightbox2/src/css/lightbox.css" rel="stylesheet">
 
+		<!-- set o template -->
+		<style>
+
+		.barra_topo {
+			background-color: <?=$config->getcor_primaria()?>;
+		}
+		.base_destaque {
+			background-color: <?=$config->getcor_primaria()?>;
+		}
+		.btn-transparente:hover {
+			border: solid 2px <?=$config->getcor_secundaria()?>;
+		}
+		.btn-transparente2 {
+			color: <?=$config->getcor_secundaria()?>;
+			border: solid 2px <?=$config->getcor_secundaria()?>;
+		}
+		.btn-transparente2:hover {
+			color: <?=$config->getcor_primaria()?>;
+			border: solid 2px <?=$config->getcor_primaria()?>;
+		}
+		.amarelo{
+			color: <?=$config->getcor_secundaria()?>;
+		}
+		.amarelo_fundo{
+			background-color: <?=$config->getcor_secundaria()?>;
+		}
+		.titulo1{
+			color:<?=$config->getcor_primaria()?>;
+		}
+		.footer2{
+			background-color: <?=$config->getcor_primaria()?>;
+			color: <?=$config->getcor_secundaria()?>;
+		}
+		.nav li a {
+			color: <?=$config->getcor_primaria()?>;
+		}
+		.nav li.active a {
+			color: <?=$config->getcor_secundaria()?>;
+			border-top: solid 3px <?=$config->getcor_secundaria()?>;
+		}
+		#box_titulo1 {
+			background-color: <?=$config->getcor_secundaria()?>;
+		}
+		</style>
 
 	</head>
 
